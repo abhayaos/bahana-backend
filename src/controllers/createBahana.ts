@@ -6,18 +6,19 @@ import { createBahanaResponse } from "../utils/createBahnaResponse";
 
 export const createBahana = async (req: Request, res: Response) => {
     try {
-      const { category, context, tone } = req.body;
+      const { category, context, tone ,who} = req.body;
   
-      if (!category || !context || !tone) {
+      if (!category || !context || !tone || !who) {
         return res.status(400).json({
-          error: "Category, context and tone are required",
+          error: "Category, context , who and tone are required",
         });
       }
   
       const bahana = await createBahanaResponse(
         category,
         context,
-        tone
+        tone,
+        who
       );
   
       res.json({ bahana });

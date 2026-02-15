@@ -7,5 +7,5 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["src/**/*", "src/controllers"]
+  "include": ["src"]
 }
