@@ -15,7 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan('combined')); 
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: ["http://localhost:5173", "https://bahanai.vercel.app"],
+  credentials: true,
   
 })); 
 app.use(helmet());
